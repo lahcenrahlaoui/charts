@@ -97,36 +97,112 @@ th, td {
 
 
 
-
+/* 
 #loading {
+
   opacity: 1;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 100;
+  /* z-index: -1; *
   width: 100vw;
   height: 100vh;
   background-color: rgba(192, 192, 192, 0.5);
   background-image: url("Screenshot_1.png");
   background-repeat: no-repeat;
   background-position: center;
-  animation: hide 3s  ;
+  /* animation: hide 3s linear ; *
 }
 
 .page{ 
+  display : none;
   opacity: 0;
-  /*display: none;*/
+  /*display: none;*
   padding: 0 0.5em; 
-  animation: show 3s linear;
-  animation-delay: 3s;
+  /* animation: show 3s linear;
+  animation-delay: 3s; *
+}
+ */
+
+
+.page    { 
+  display: none; 
+  padding: 0 0.5em; 
+  animation: show 3s ;
 }
 
+.loadd {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(87, 41, 41, 0.5);
+  background-image: url("Screenshot_1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-size: 750px 500px;
+  animation: hide  3.5s ;
+}
+
+
+
 @keyframes hide {
-  0% { opacity: 1;}
-  100% {  opacity: 0; display: none;}
+  from { opacity: 1;}
+  to   {  opacity: 0; }
 }
 
 @keyframes show {
-  0% {opacity: 0;}
-  100% {  opacity: 1; display: flex;}
+  from {opacity: 0;}
+  to   {  opacity: 1;}
+}
+
+
+
+/****************/
+
+.center-dot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20% 0 ;
+}
+
+.dot-typing {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  animation: dotTyping 1.5s infinite linear;
+}
+
+@keyframes dotTyping {
+  0% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  }
+  16.667% {
+    box-shadow: 9984px -10px 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  }
+  33.333% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px -10px 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  }
+  66.667% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  }
+  83.333% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px -10px 0 0 #9880ff;
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  }
 }

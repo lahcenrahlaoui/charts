@@ -54,9 +54,32 @@ function isNumber(evt) {
 
 
 
-/*
+
+// function onReady(callback) {
+//   var intervalId = window.setTimeout(function() {
+//     if (document.getElementsByTagName('body')[0] !== undefined) {
+//       window.clearInterval(intervalId);
+//       callback.call(this);
+//     }
+//   }, 3000);
+// }
+
+// function setVisible(selector, display) {
+//   document.querySelector(selector).style.display = visible ? 'block' : 'none';
+//   //  document.querySelector(selector).style.opacity = x ? 1 : 0;
+
+
+// }
+
+// onReady(function() {
+//   setVisible('.page', true);
+//   setVisible('.loadd', false);
+
+// });
+
+
 function onReady(callback) {
-  var intervalId = window.setTimeout(function() {
+  var intervalId = window.setInterval(function() {
     if (document.getElementsByTagName('body')[0] !== undefined) {
       window.clearInterval(intervalId);
       callback.call(this);
@@ -64,17 +87,12 @@ function onReady(callback) {
   }, 3000);
 }
 
-function setVisible(selector, x) {
-  //document.querySelector(selector).style.display = visible ? 'block' : 'none';
-    document.querySelector(selector).style.opacity = x ? 1 : 0;
-
-
+function setVisible(selector, visible) {
+  document.querySelector(selector).style.display = visible ? 'block' : 'none';
 }
 
 onReady(function() {
   setVisible('.page', true);
-  setVisible('#loading', false);
-  setVisible('.loadd', false);
-
+  setVisible('.center-dot', false);
 });
-*/
+

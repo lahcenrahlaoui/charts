@@ -51,7 +51,7 @@ async function barForModule(){
   const data =  await getDataForModule();
   const ctx = document.getElementById('myChartx').getContext('2d');
   myChart = new Chart(ctx,{
-    type: 'bar',
+    type: 'radar',
     data: {
       labels: data.xs,
       datasets: [{
@@ -177,7 +177,7 @@ async function heatMapChart(){
   chart = new frappe.Chart("#heatmapss", {
     type: "heatmap",
     data:data,
-    discreteDomains:1,
+    radius:2,
     colors: ['#ebedf0', '#c0ddf9', '#73b3f3', '#3886e1', '#17459e','#ebedf0', '#c0ddf9', '#73b3f3', '#3886e1', 'red'],
 
   });
