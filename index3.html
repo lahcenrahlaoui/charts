@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <script src="cdn.js"></script>
+    
+    <style>
+      .kkkkk{
+        width:700px ;
+        height:500px
+      }
+    </style>
+    </head>
+    <body>
+        
+
+<div class="kkkkk" >
+  <canvas id="chartJSContainer"></canvas>
+
+</div>
+
+
+
+<script>
+
+
+var options = {
+  type: 'bubble',
+  data: {
+    datasets: [
+      {
+        label: 'John',
+        data: [
+          {
+            x: 3,
+            y: 7,
+            r: 10
+          }
+        ],
+        backgroundColor:"#ff6384",
+        hoverBackgroundColor: "#ff6384"
+      },
+      {
+        label: 'Paul',
+          data: [
+            {
+              x: 6,
+              y: 2,
+              r: 10
+            }
+          ],
+          backgroundColor:"#ff6384",
+          hoverBackgroundColor: "#ff6384"
+      },
+      {
+        label: 'George',
+          data: [
+            {
+              x: 2,
+              y: 6,
+              r: 10
+            }
+          ],
+          backgroundColor:"#ff6384",
+          hoverBackgroundColor: "#ff6384"
+      },
+      {
+        label: 'Ringo',
+          data: [
+            {
+              x: 5,
+              y: 3,
+              r: 10
+            }
+          ],
+          backgroundColor:"#ff6384",
+          hoverBackgroundColor: "#ff6384"
+      },
+      {
+        label: 'John',
+          data: [
+            {
+              x: 2,
+              y: 1,
+              r: 20
+            }
+          ],
+          backgroundColor:"#ff6384",
+          hoverBackgroundColor: "#ff6384"
+      },
+      {
+        label: 'George',
+          data: [
+            {
+              x: 1,
+              y: 3,
+              r: 10
+            }
+          ],
+          backgroundColor:"#ff6384",
+          hoverBackgroundColor: "#ff6384"
+      },
+      {
+        label: 'Ringo',
+          data: [
+            {
+              x: 1,
+              y: 1,
+              r: 10
+            }
+          ],
+          backgroundColor:"#ff6384",
+          hoverBackgroundColor: "#ff6384"
+      },
+      {
+        label: 'George',
+          data: [
+            {
+              x: 1,
+              y: 2,
+              r: 10
+            }
+          ],
+          backgroundColor:"#ff6384",
+          hoverBackgroundColor: "#ff6384"
+      }
+      ]
+  }
+}
+
+var ctx = document.getElementById('chartJSContainer').getContext('2d');
+new Chart(ctx, options);
+
+
+
+  </script>
+
+
+<!--
+  or -->
+<!--
+
+  
+  <script>
+    
+    
+    // function for get data 
+    async function getDataHeatMap(){
+      
+      let i = 0;
+      const  response = await fetch('combineddd.csv');
+      const data = await response.text();
+      var dateX={};
+      var allnotes=[];
+      let alldays =[];
+      var k;
+      const table = data.split('\n').slice(0);
+      table.forEach(row =>{
+        const columns = row.split(',');
+        const id = columns[0];
+        //console.log(id)
+        if(id == 'ids'){
+          
+          console.log(">>>>>>>   "+columns.length);
+          
+          for(let i = 1 ; i<199;i++)
+          {
+            columns[i] = columns[i].replace(new RegExp('/', 'g'), '-');
+            alldays[i-1] = (columns[i]); 
+          }
+          console.log('acsda  <<<<<<  >>>>  '+alldays[0]);
+      }
+      if (id == 14010996865){
+        for(i = 1 ; i<199 ; i++){
+          allnotes[i-1] = parseFloat(columns[i]);
+        }
+      }
+
+    });
+    
+    alldays.forEach((key, val) => dateX[key] = allnotes[val]);
+    
+    console.log("klfhjasdlkfhjalskdh lkfjhalksdhjfl lkhjfalkh ");
+    console.log(typeof dateX);
+    
+    console.log(dateX);
+    
+    return dateX;
+  }
+  
+  
+  var heatMapchart;
+  heatMapChart();
+  async function heatMapChart(){
+    var dates = await getDataHeatMap();
+    
+    console.log("mariooooo ");
+    console.log(dates );
+    /*
+    dates = {
+      "01-01-2021": 2,
+      "01-02-2021": 4,
+  "01-05-2021": 5,
+  "01-15-2021": 3,
+  "01-20-2021": 1
+};
+*/
+console.log("mariooooo 222222222 ");
+console.log(dates );
+
+
+const getTimestamp = (date) =>
+Math.round(new Date(date).getTime() / 1000).toString();
+
+const toDataPointsV2 = (dates) => {
+  const normalDates = Object.keys(dates);
+  let dataPoints = {};
+  normalDates.forEach((item) => {
+    const timeStamp = getTimestamp(item);
+    dataPoints[timeStamp] = dates[item];
+    console.log(timeStamp);
+  });
+    console.log("im mario ");
+    
+    return dataPoints;
+  };
+
+  let data = {
+    dataPoints: toDataPointsV2(dates),
+    start: new Date("09-17-2020"), // a JS date object
+    end: new Date("04-02-2021")
+  };
+  console.log(data);
+chart = new frappe.Chart("#heatmapss", {
+  
+  type: "heatmap",
+  data:data
+});
+
+}
+
+
+</script>
+
+-->
+
+
+</body>
+</html>

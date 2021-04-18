@@ -1,5 +1,5 @@
 // declaration of variables 
-var item  =  document.querySelector('input[name="type"]:checked').value;
+var chartType  =  document.querySelector('input[name="type"]:checked').value;
 
 // declaration of chart type 
 var myChart = null;
@@ -9,36 +9,35 @@ var bool =false;
 if (document.querySelector('input[name="type"]')) {
   document.querySelectorAll('input[name="type"]').forEach((elem) => {
     elem.addEventListener("change", function(event) {
-      item = event.target.value;
-      console.log(item);
+      chartType = event.target.value;
+      console.log(chartType);
       if(bool)
-        destt();
+        destroyChart();
       bool = true;
-      chartIt();
+      appVesitors();
     });
   });
 }
 
-//destroy function 
-function destt(){
+//destroy chart  
+function destroyChart(){
   if (myChart !=null)
     myChart.destroy();
 }
 // call function for the first time 
 if(!bool)
-  chartIt();
+  appVesitors();
 bool = true;
 
 // function for chart 
-    async function chartIt(){
-      const data =  await getData();
-      const ctx = document.getElementById('myChart').getContext('2d');
+    async function appVesitors(){
+      const data =  await getDataVesitors();
+      const ctx = document.getElementById('app-vesitors').getContext('2d');
       myChart = new Chart(ctx, {
-          type: item,
+          type: chartType,
           data: {
               labels: data.xs,
               datasets: [{
-                label : 'red',
                   data: data.ys,
                   tension: 0.4,
                   backgroundColor:'rgb(119, 192, 192)',
@@ -48,10 +47,20 @@ bool = true;
           },
 
           options: {
+            scales :{
+              x:{
+                title:{
+                  color : 'red'
+                  ,
+                  display :true,
+                  text : 'month'
+                }
+              }
+            },
             plugins: {
               title: {
                   display: true,
-                  text: 'Custom Chart Title'
+                  text: 'App vesitors in the year '
               },
               legend: {
                 display: false,
@@ -61,7 +70,7 @@ bool = true;
         });
       }
     // function for get data 
-    async function getData(){
+    async function getDataVesitors(){
       const xs = [];
       const ys = [];
       

@@ -2,12 +2,17 @@
 <html>
     <head>
       
-      <script src="cdn.js"></script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+    
+
       <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="css.css">
+      <link rel="stylesheet" href="navstyle.css">
     
     </head>
     <body class="mybody">
+      <div class="page">
+
         <nav>
           <div class="hamburger">
             <div class="line"></div>
@@ -24,52 +29,156 @@
             </ul>
           </div>
         </nav>
-      <div class="disp">
-        <div class="graph-name">
-          <input class="radio-css" type="radio" name="type" value="line" checked> Line
-          <input class="radio-css" type="radio" name="type" value="bar"> Bar
+        <div class="make-it-center">
+          <div class="graph-name">
+            <input class="radio-css" type="radio" name="type" value="line" checked> Line
+            <input class="radio-css" type="radio" name="type" value="bar"> Bar
+          </div>
         </div>
-      </div>
 
-<!--
-    <div class="new">
+    <!-- <div class="new">
       <canvas id="myChart1" ></canvas>
       
     </div>
     <div class="new">
       <canvas id="myChart2" ></canvas>
       
-    </div>
--->
-    <div class="notnew">
-      <div class="new">
-        <canvas id="myChart"  ></canvas>
+    </div> -->
+
+
+    <div class="make-it-center">
+      <div class="chart-style">
+        <canvas id="app-vesitors"  ></canvas>
       </div>
     </div>
-    
-    
+  
 
-      <div class="container">
+    <div class="make-it-center">
+      <div class="chart-style">
+        <canvas id="myChartCl"  ></canvas>
+      </div>
+    </div>
+
+    <div class="make-it-center">
+      <div class="chart-style">
+        <canvas id="myChartC"  ></canvas>
+      </div>
+    </div>
+  <div class="container">
+    <div class="grid-container">
+      <div class="for-grid"></div>
+      
+      <div class="for-grid"><canvas id="myCharts"></canvas></div>
+      <div class="for-grid"><canvas id="myChartss"></canvas></div>
+      
+      <div class="for-grid"></div>
+    </div>
+        
+  </div>
+  
+      <!-- <div class="container">
         <div class="grid-container">
-          <div></div>
-          <div class="notnews">
-              <canvas id="myCharts"  ></canvas>
+          <div class="for-grid"></div>
+          
+          <div class="for-grid table">
+            <table>
+              <tr>
+                <th>name</th>
+                <th>Lname</th>
+                <th>age</th>
+                <th>Lname</th>
+                <th>age</th>
+              </tr>
+              <tr>
+                <td>aaa</td>
+                <td>bbb</td>
+                <td>555</td>
+                <td>bbb</td>
+                <td>555</td>
+              </tr>
+              <tr>
+                <td>aaa</td>
+                <td>bbb</td>
+                <td>555</td>
+                <td>bbb</td>
+                <td>555</td>
+              </tr>
+              <tr>
+                <td>aaa</td>
+                <td>bbb</td>
+                <td>555</td>
+                <td>bbb</td>
+                <td>555</td>
+              </tr>
+            </table>
           </div>
-          <div class="notnews">
-              <canvas id="myChartss"  ></canvas>
+          <div class="for-grid table">
+            <table>
+              <tr>
+                <th>name</th>
+                <th>Lname</th>
+                <th>age</th>
+                <th>Lname</th>
+                <th>age</th>
+              </tr>
+              <tr>
+                <td>aaa</td>
+                <td>bbb</td>
+                <td>555</td>
+                <td>bbb</td>
+                <td>555</td>
+              </tr>
+              <tr>
+                <td>aaa</td>
+                <td>bbb</td>
+                <td>555</td>
+                <td>bbb</td>
+                <td>555</td>
+              </tr>
+              <tr>
+              <td>aaa</td>
+              <td>bbb</td>
+              <td>555</td>
+                <td>bbb</td>
+                <td>555</td>
+              </tr>
+            </table>
           </div>
-          <div>
-          </div>
+          
+          <div class="for-grid"></div>
         </div>
         
       </div>
+       -->
+      
+<!--       
+
+      <div id='table-container' style="background-color: red; min-width: 50px; min-height: 250px;"></div>
+       -->
+      
     
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </div>
+      
+  
+  
+  
+  
+  
+    <div class="loadd">
+      <div id="loading"></div>
+    </div>
+  
 
-    <script src="linechart.js"></script>
+    <script src="cdn.js"></script>
+
+    <script src="app-vesitors.js"></script>
     <script src="piechart.js"></script>
+    <script src="finalNote.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="thejs.js"></script>
+
+
 
     </body>
 </html>

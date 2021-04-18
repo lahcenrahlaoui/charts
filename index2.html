@@ -4,8 +4,15 @@
       
       <script src="cdn.js"></script>
       <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="css.css">
+      <link rel="stylesheet" href="navstyle.css">
     
+
+      <script src="cdnfrappe.js"></script>
+      <script src="https://unpkg.com/frappe-charts@1.2.4/dist/frappe-charts.min.iife.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.2.4/dist/frappe-charts.min.iife.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.5.0/frappe-gantt.min.js" integrity="sha512-5M8ejeX3DuiV4VGIFjHP5gpryPQb1dWYjzTUhBUKj81aT6ZZz6+wIG8k89nbjsiHFJHQbi/CByHQTe4mJOi3hw==" crossorigin="anonymous"></script>
+    
+
     </head>
     <body class="mybody">
         <nav>
@@ -24,34 +31,42 @@
             </ul>
           </div>
         </nav>
-      <div class="disp">
-        <div class="graph-name">
-          THE id <input class="input-id-css" type="input" name="type" placeholder="line" type="number" > 
+      <div class="make-it-center">
+        <div class="input-section">
+            <input id="input-id" class="input-id-css" type="text" name="type" placeholder="#ID" onkeypress="return isNumber(event)" />
+          </div>
+      </div>
+
+
+
+
+
+    
+      <div class="make-it-center">
+        <div class="chart-style">
+          <canvas id="myChartx" ></canvas>
         </div>
       </div>
 
-<!--
-
-  <div class="notnew">
-    <div class="new">
-      <canvas id="myChart"  ></canvas>
-    </div>
-  </div>
--->
     
+      
+      <div class="make-it-center">
+        <div class="make-it-center">
+          
     
+        <div class="chart-style chart-width">
+          <div id="heatmapss"></div>
+        </div>
+      </div>
+      </div>
 
-    
 
 
-
-
-
-
-    <script src="for_student.js"></script>    
+    <script src="final-note.js"></script>    
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="thejs.js"></script>
+
 
     </body>
 </html>
