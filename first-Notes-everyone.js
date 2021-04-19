@@ -1,13 +1,16 @@
-var mytype  ;
-  var myChart= {};
-    finalNoteChart();
+
+
+var extra=0;
+console.log(" i m mariooo    "+ extra);
+var myChart= {};
+finalNoteChart();
     var data ;
     async function finalNoteChart(){
       data =  await getFinalNoteData();
-      const ctx = document.getElementById('myChartCl').getContext('2d');
+      const ctxss = document.getElementById('myChartCl').getContext('2d');
       
       
-      myChart = new Chart(ctx, {
+      myChart = new Chart(ctxss, {
         
           type: 'line',
           data: {
@@ -41,8 +44,19 @@ var mytype  ;
             }, 
             
             onClick: (evt, item) => {
-             // const idx = myChart.getElementAtEvent(event)[0]._index;
-             // console.log(labels[idx]);
+              const idx = myChart.getElementAtEvent(event)[0]._index;
+              console.log(data.XLabels[idx]);
+              extra = parseInt(data.XLabels[idx]);
+
+            
+              console.log(typeof extra);
+              console.log(" i m extra  >>>  "+extra);
+
+              
+              location.href = "second_Just_one.html";
+
+
+              
             }
           },
 
@@ -52,14 +66,14 @@ var mytype  ;
 
 
 
-    document.getElementById("myChartCl").onclick = function (evt) {
-      console.log(myChart);
-      var activePoints = myChart.getElementsAtEventForMode(evt, 'point', myChart.options);
-      var firstPoint = activePoints[0];
-      var label = myChart.data.labels[firstPoint._index];
-      var value = myChart.data.datasets[firstPoint._datasetIndex].data[firstPoint._index];
-      console.log(label + ": " + value);
-  };
+  //   document.getElementById("myChartCl").onclick = function (evt) {
+  //     console.log(myChart);
+  //     var activePoints = myChart.getElementsAtEventForMode(evt, 'point', myChart.options);
+  //     var firstPoint = activePoints[0];
+  //     var label = myChart.data.labels[firstPoint._index];
+  //     var value = myChart.data.datasets[firstPoint._datasetIndex].data[firstPoint._index];
+  //     console("fasdfasdfa   >> " + extra);
+  // };
 
 
 
@@ -121,6 +135,7 @@ var mytype  ;
           }
       }}*/
       // for send the data to the function
+      
       for(let counter = 0 ; counter<mynotes.length ; counter++){
         XLabels.push(ids[counter]);
         YLabels.push(mynotes[counter]);

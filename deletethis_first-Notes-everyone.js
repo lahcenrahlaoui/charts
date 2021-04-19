@@ -1,5 +1,5 @@
 var labels =  ["lab","els"];
-var data =[5,6];
+var data =[6,6];
 let chart = new Chart(document.getElementById('myChart'), {
   type: 'bar',
   data: {
