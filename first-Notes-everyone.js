@@ -1,10 +1,14 @@
 var mytype  ;
-  
+  var myChart= {};
     finalNoteChart();
+    var data ;
     async function finalNoteChart(){
-      const data =  await getFinalNoteData();
+      data =  await getFinalNoteData();
       const ctx = document.getElementById('myChartCl').getContext('2d');
-      const myChart = new Chart(ctx, {
+      
+      
+      myChart = new Chart(ctx, {
+        
           type: 'line',
           data: {
               labels: data.XLabels,
@@ -12,14 +16,21 @@ var mytype  ;
                   data: data.YLabels,
                   radius:1.5,
                   showLine:false,
-                  backgroundColor:['rgb(119, 192, 192)','rgb(192, 192, 119)'],
-                  borderColor:['rgb(119, 192, 192)','rgb(192, 192, 119)'],
+                  backgroundColor:['rgb(119, 192, 192)'],
+                  borderColor:['rgb(119, 192, 192)'],
                   borderWidth: 3
               }
             ]
           },
           options: {
+            scaleStartValue: 0,
             plugins: {
+              datalabels: {
+                display: false,
+                formatter: function(value, context) {
+                  return '$' + Number(value).toLocaleString();
+                },
+              },
               title: {
                   display: true,
                   text: 'Custom Chart Title'
@@ -28,12 +39,30 @@ var mytype  ;
                 display: false,
               }
             }, 
-          }
-      });
+            
+            onClick: (evt, item) => {
+             // const idx = myChart.getElementAtEvent(event)[0]._index;
+             // console.log(labels[idx]);
+            }
+          },
 
-      
-    }
-  
+          
+      });
+}
+
+
+
+    document.getElementById("myChartCl").onclick = function (evt) {
+      console.log(myChart);
+      var activePoints = myChart.getElementsAtEventForMode(evt, 'point', myChart.options);
+      var firstPoint = activePoints[0];
+      var label = myChart.data.labels[firstPoint._index];
+      var value = myChart.data.datasets[firstPoint._datasetIndex].data[firstPoint._index];
+      console.log(label + ": " + value);
+  };
+
+
+
     async function getFinalNoteData(){
       // Axis
       const XLabels = [];
@@ -43,6 +72,7 @@ var mytype  ;
       // for removing the duplicate ids 
       let ids = []
       var id_test = 0 ;
+      var notes_test = 0;
       // for save the notes without duplicate
       var mynotes = [];
       var notes;
@@ -61,18 +91,22 @@ var mytype  ;
         // Get the Data from columns 19 and 20 
         var notes1 = columns[19];
         var notes2 = columns[20];
+
         // Calculate the result of the year
-        notes = (parseInt(notes1)+parseInt(notes2))/2;
+        notes = (parseFloat(notes1)+parseFloat(notes2))/2;
         if (notes !=null) {
           // for removing the duplicate ids 
-            if(id_test != id){
-              id_test = id;
+            if((notes != notes_test)){
+
+              id_test = id;           
+              notes_test = notes;      
               mynotes[index] = notes;
               ids[index]     = id;
               index++;
             }
         }
       });
+      
       // for sorting the data 
      /* var con; // the third variable
       for(let c0 = 0 ; c0<mynotes.length;c0++){
