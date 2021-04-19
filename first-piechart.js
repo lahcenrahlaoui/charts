@@ -34,7 +34,7 @@ async function nationalityChart(){
   backgroundColor = ['rgb(119, 192, 192)','rgb(192, 192, 119)'];
   borderColor = ['rgb(119, 192, 192)','rgb(192, 192, 119)'];
   initialiseOptions(data,backgroundColor,borderColor);
-  const ctx = document.getElementById('myCharts').getContext('2d');
+  const ctx = document.getElementById('nationality-chart').getContext('2d');
   const myChart = new Chart(ctx,op);
 }
 
@@ -85,7 +85,7 @@ async function genderChart(){
   backgroundColor=['rgb(100, 192, 250)','rgb(255, 0, 119)'];
   borderColor=['rgb(100, 192, 250)','rgb(255, 0, 119)'];
   initialiseOptions(data,backgroundColor,borderColor);
-  const ctx = document.getElementById('myChartss').getContext('2d');
+  const ctx = document.getElementById('gender-chart').getContext('2d');
   const myChart = new Chart(ctx,op);
 }
 
@@ -137,7 +137,7 @@ async function superTenChart(){
   borderColor = ['rgb(100, 192, 250)','rgb(255, 0, 119)'],
               
   initialiseOptions(data,backgroundColor,borderColor);
-  const ctx = document.getElementById('myChartC').getContext('2d');
+  const ctx = document.getElementById('above-ten-chart').getContext('2d');
   const myChart = new Chart(ctx,op);
 }
 

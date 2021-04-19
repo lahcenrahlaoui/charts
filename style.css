@@ -37,6 +37,7 @@ body{
   padding: 20px;
   background: #e5e5e5;
   border-radius: 5px;
+  
 }
 
 
@@ -59,15 +60,22 @@ body{
 
 .input-text-outside{
   margin: 15px;
+
 }
 .input-id-css{
   width: auto;
-  height: 35px;
+  height: 45px;
   padding: 5px 7px;
   border-radius: 5px;
   border: 1.5px solid black;
+  text-align: center;
+  font-size: 26px;
+  border: 0;
 }
+.input-id-css:focus{
+  outline: 0;
 
+}
 .radio-css{
   margin:10px 20px;
   
@@ -177,32 +185,32 @@ th, td {
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #9880ff;
-  color: #9880ff;
-  box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  background-color: rgb(119, 192, 192);
+  color: rgb(119, 192, 192);
+  box-shadow: 9984px 0 0 0 rgb(119, 192, 192), 9999px 0 0 0 rgb(119, 192, 192), 10014px 0 0 0 rgb(119, 192, 192);
   animation: dotTyping 1.5s infinite linear;
 }
 
 @keyframes dotTyping {
   0% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+    box-shadow: 9984px 0 0 0 rgb(119, 192, 192), 9999px 0 0 0 rgb(119, 192, 192), 10014px 0 0 0 rgb(119, 192, 192);
   }
   16.667% {
-    box-shadow: 9984px -10px 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+    box-shadow: 9984px -10px 0 0 rgb(119, 192, 192), 9999px 0 0 0 rgb(119, 192, 192), 10014px 0 0 0 rgb(119, 192, 192);
   }
   33.333% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+    box-shadow: 9984px 0 0 0 rgb(119, 192, 192), 9999px 0 0 0 rgb(119, 192, 192), 10014px 0 0 0 rgb(119, 192, 192);
   }
   50% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px -10px 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+    box-shadow: 9984px 0 0 0 rgb(119, 192, 192), 9999px -10px 0 0 rgb(119, 192, 192), 10014px 0 0 0 rgb(119, 192, 192);
   }
   66.667% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+    box-shadow: 9984px 0 0 0 rgb(119, 192, 192), 9999px 0 0 0 rgb(119, 192, 192), 10014px 0 0 0 rgb(119, 192, 192);
   }
   83.333% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px -10px 0 0 #9880ff;
+    box-shadow: 9984px 0 0 0 rgb(119, 192, 192), 9999px 0 0 0 rgb(119, 192, 192), 10014px -10px 0 0 rgb(119, 192, 192);
   }
   100% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+    box-shadow: 9984px 0 0 0 rgb(119, 192, 192), 9999px 0 0 0 rgb(119, 192, 192), 10014px 0 0 0 rgb(119, 192, 192);
   }
 }

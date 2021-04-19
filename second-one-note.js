@@ -3,10 +3,17 @@
 var myChart = null;
 var bool =false;
 var changeval = null;
-var newValue ='2';
+var newValue ;
 var prevVal = null;
 
 ///  14011097631
+var coc = parseInt(document.cookie.substring(0,11));
+console.log('im cookie   ');
+console.log(coc);
+console.log(typeof coc);
+
+// var strFirstThree = coc.substring(0,11);
+
 
 
 var xxxx;
@@ -14,27 +21,26 @@ var _myInterval = setInterval(function() {
     
   newValue = document.getElementById("input-id").value;
   if((newValue[0]!='1')){
-    console.log("YEEEEEEEEEEEEEEEES");
+    //!! console.log("YEEEEEEEEEEEEEEEES");
   }
   xxxx= newValue[0]+newValue[1]+newValue[2]+newValue[3];
   if(xxxx!='1401'){
     newValue = "1401"+newValue;
-    console.log("YEEEEEEEEEEEEEEEES   " + newValue);
+    //!! console.log("YEEEEEEEEEEEEEEEES   " + newValue);
   }
   if(prevVal == newValue) {
-    console.log("No change for 2 second", newValue)
+    //!! console.log("No change for 2 second", newValue)
   } 
   else {
     prevVal = newValue;
       if(myChart!=null){
         myChart.destroy();
         barForModule();
-        console.log(" New: ", newValue)
+        //!! console.log(" New: ", newValue)
       }else{
         barForModule();
-
       }
-      // heatMapChart();
+      heatMapChart();
   }
 }, 2000);
 
@@ -47,11 +53,10 @@ var _myInterval = setInterval(function() {
 
 // function for chart 
 async function barForModule(){
-  console.log("heeeeeeeeeeeeeeeeeeey");
   const data =  await getDataForModule();
   const ctx = document.getElementById('myChartx').getContext('2d');
   myChart = new Chart(ctx,{
-    type: 'radar',
+    type: 'bar',
     data: {
       labels: data.xs,
       datasets: [{
@@ -114,6 +119,10 @@ async function getDataForModule(){
 
 
 
+document.getElementById('input-id').value =  coc ;
 
 
-// document.getElementById('input-id').value =ee;
+
+
+
+
