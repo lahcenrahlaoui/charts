@@ -10,7 +10,7 @@ finalNoteChart();
       
         type: 'line',
         data: {
-            labels: data.xdLabel,
+            labels: data.XLabels,
             datasets: [{
                 data: data.YLabels,
                 radius:1.5,
@@ -21,7 +21,45 @@ finalNoteChart();
             }
           ]
         },
+
+        
         options: {
+          scales: {
+            y: {
+              max : 20,
+              min : 20
+            },
+            xAxes: [{
+                ticks:{
+                  display:false,
+                // },
+
+                // ticks: {
+                  beginAtZero: true,
+                  callback: function(value, index, values) {
+                    // where 3 is the line index you want to display
+                    
+                    return (index%20 == 1) ? "" : null;
+                  }
+                },
+                gridLines: {
+                  //  color: "rgba(0, 0, 0, 0)",
+                }
+            }],
+            yAxes: [{
+              
+              gridLines: {
+                  //color: "rgba(0, 0, 0, 0)",
+              }   
+            }]
+        },
+
+
+        
+
+
+
+
 
           //* for delete the ids 
           // scales: {
@@ -35,6 +73,14 @@ finalNoteChart();
 
           scaleStartValue: 0,
           plugins: {
+            tooltip:{
+              callbacks: {
+                label: function() {
+                    return XLabels;
+                }
+            }
+            },
+
             datalabels: {
               display: false,
               formatter: function(value, context) {
@@ -71,6 +117,16 @@ finalNoteChart();
             document.cookie = parseInt(data.XLabels[idx]);
             location.href = "second_Just_one.html";
           },
+        //   hover: {
+        //     mode: 'nearest',
+        //     intersect: false,
+        //     onHover: function (e, item) {
+        //         if (item.length) {
+        //             const data = item[0]._chart.config.data.datasets[0].data[item[0]._index];
+        //             console.log(data.XLabels[0], data);
+        //         }
+        //     }
+        // }
           
         },
 

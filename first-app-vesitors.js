@@ -1,5 +1,8 @@
 // declaration of variables 
+
+
 var chartType  =  document.querySelector('input[name="type"]:checked').value;
+const directory = './files/';
 
 // declaration of chart type 
 var myChart = null;

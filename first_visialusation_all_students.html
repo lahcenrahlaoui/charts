@@ -2,7 +2,7 @@
 <html>
     <head>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/0.7.7/chartjs-plugin-zoom.min.js" integrity="sha512-8E9fPF4pjWxI0dpprpn4WYeciAMo2kh6xN0COFxvTfurMttjZzih/sBp+Fxu49Zr6IUSp4sqWY6KLecnqOCwxA==" crossorigin="anonymous"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/0.7.7/chartjs-plugin-zoom.min.js" integrity="sha512-8E9fPF4pjWxI0dpprpn4WYeciAMo2kh6xN0COFxvTfurMttjZzih/sBp+Fxu49Zr6IUSp4sqWY6KLecnqOCwxA==" crossorigin="anonymous"></script> -->
 
 
       
@@ -188,7 +188,95 @@
     <script src="js_file_1.js"></script>
     <script src="js_file_2.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/0.7.7/chartjs-plugin-zoom.min.js" integrity="sha512-8E9fPF4pjWxI0dpprpn4WYeciAMo2kh6xN0COFxvTfurMttjZzih/sBp+Fxu49Zr6IUSp4sqWY6KLecnqOCwxA==" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/0.7.7/chartjs-plugin-zoom.min.js" integrity="sha512-8E9fPF4pjWxI0dpprpn4WYeciAMo2kh6xN0COFxvTfurMttjZzih/sBp+Fxu49Zr6IUSp4sqWY6KLecnqOCwxA==" crossorigin="anonymous"></script> -->
 
-    </body>
+
+    <div id='fileNames'></div>
+  
+    <!-- <script>
+        var fileNames = new Array();
+        $.ajax({
+          url: "../New folder",
+          success: function(data){
+            $(data).find("td > a").each(function(){
+                if(openFile($(this).attr("href"))){
+                    fileNames.push($(this).attr("href"));
+                }           
+            });
+          }
+        }); 
+        document.cookie =  fileNames;
+        console.log(fileNames);
+        function openFile(file) {
+            var extension = file.substr( (file.lastIndexOf('.') +1) );
+            switch(extension) {
+                case 'jpg':
+                case 'csv':
+                case 'png':
+                case 'gif':   // the alert ended with pdf instead of gif.
+                case 'zip':
+                case 'rar':
+                case 'pdf':
+                case 'php':
+                case 'doc':
+                case 'docx':
+                case 'xls':
+                case 'xlsx':
+                  return true;
+                default:
+                  return false;
+            }
+        };
+        </script>
+
+ -->
+
+
+<script>
+
+  
+  function loadFileNames(dir) {
+    return new Promise((resolve, reject) => {
+      try {
+          var fileNames = new Array();
+          $.ajax({
+              url: dir,
+              success: function (data) {
+                  for(var i = 1; i < $(data).find('li span.name').length; i++){
+                      var elem = $(data).find('li span.name')[i];
+                      fileNames.push(elem.innerHTML);
+                  }
+                  return resolve(fileNames);
+              }
+          });
+        } catch (ex) {
+          return reject(new Error(ex));
+      }
+    });
+  }
+  
+  loadFileNames('../New folder').then((data) => {
+    var re = /(?:\.([^.]+))?$/;
+    var ext;
+    var list =[];
+    var j = 0;
+    for(let i = 0 ; i < data.length ; i++){
+      ext = re.exec(data[i])[1];   // "txt"
+      if(ext == 'csv'){
+        list[j] = data[i];
+        j++;
+      }
+      else
+      console.log(ext)
+
+    }
+    console.log(list)
+
+  }).catch((error) => {
+      alert('Files could not be loaded. please check console for details');
+      console.error(error);
+  });
+</script>
+  
+</body>
 </html>
