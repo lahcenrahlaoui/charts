@@ -1,12 +1,13 @@
-var myChart= {};
+var mycharts= {};
 finalNoteChart();
   var data ;
   async function finalNoteChart(){
+    
     data =  await getFinalNoteData();
     
     const ctxss = document.getElementById('final-note-chart').getContext('2d');
-
-    myChart = new Chart(ctxss, {
+    
+    mycharts = new Chart(ctxss, {
       
         type: 'line',
         data: {
@@ -15,8 +16,8 @@ finalNoteChart();
                 data: data.YLabels,
                 radius:1.5,
                 showLine:false,
-                backgroundColor:'rgb(119, 192, 192)',
-                borderColor:'rgb(119, 192, 192)',
+                backgroundColor:[chartColors.red],
+                borderColor:[chartColors.red],
                 borderWidth: 3
             }
           ]
@@ -38,7 +39,7 @@ finalNoteChart();
                   beginAtZero: true,
                   callback: function(value, index, values) {
                     // where 3 is the line index you want to display
-                    
+
                     return (index%20 == 1) ? "" : null;
                   }
                 },
@@ -110,7 +111,7 @@ finalNoteChart();
           }, 
           
           onClick: (evt, item) => {
-            const idx = myChart.getElementAtEvent(event)[0]._index;
+            const idx = mycharts.getElementAtEvent(event)[0]._index;
             //!! console.log(data.XLabels[idx]);
 
             deleteAllCookies() ;
@@ -128,12 +129,32 @@ finalNoteChart();
         //     }
         // }
           
-        },
-
+      },
         
     });
+
+    heyo();
+
+  function heyo(){
+    var colorChangeValue = 10; //set this to whatever is the deciding color change value
+    var dataset = mycharts.data.datasets[0];
+    for (var i = 0; i < dataset.data.length; i++) {
+      if (dataset.data[i] > colorChangeValue) {
+        dataset.backgroundColor[i] = chartColors.blue;
+        dataset.borderColor[i] = chartColors.blue;
+      }else{
+        dataset.backgroundColor[i] = chartColors.red;
+        dataset.borderColor[i] = chartColors.red;
+
+      }
+    }
+  }
 }
 
+var chartColors = {
+  red: 'rgb(255, 50, 50)',
+  blue: 'rgb(54, 50, 235)'
+};
 
 
 async function getFinalNoteData(){

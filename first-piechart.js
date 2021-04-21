@@ -1,7 +1,7 @@
 var op ;
 function initialiseOptions(data,backgroundColor,borderColor){
 op={
-type: 'pie',
+type: 'doughnut',
 data: {
   labels: data.XLabels,
     datasets: [{

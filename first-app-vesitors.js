@@ -2,7 +2,6 @@
 
 
 var chartType  =  document.querySelector('input[name="type"]:checked').value;
-const directory = './files/';
 
 // declaration of chart type 
 var myChart = null;
@@ -15,7 +14,7 @@ if (document.querySelector('input[name="type"]')) {
       chartType = event.target.value;
       console.log(chartType);
       if(bool)
-        destroyChart();
+      destroyChart();
       bool = true;
       appVesitors();
       finalNoteChart();
