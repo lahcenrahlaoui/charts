@@ -2,13 +2,9 @@ var mycharts= {};
 finalNoteChart();
   var data ;
   async function finalNoteChart(){
-    
     data =  await getFinalNoteData();
-    
     const ctxss = document.getElementById('final-note-chart').getContext('2d');
-    
     mycharts = new Chart(ctxss, {
-      
         type: 'line',
         data: {
             labels: data.XLabels,
@@ -22,58 +18,36 @@ finalNoteChart();
             }
           ]
         },
-
-        
         options: {
           scales: {
-            y: {
-              max : 20,
-              min : 20
-            },
+
+              yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    max :20,
+                    min :0
+                }
+              }],
+          
             xAxes: [{
                 ticks:{
                   display:false,
-                // },
-
-                // ticks: {
                   beginAtZero: true,
                   callback: function(value, index, values) {
-                    // where 3 is the line index you want to display
-
+                    // where 20 is the line index you want to display
                     return (index%20 == 1) ? "" : null;
                   }
                 },
-                gridLines: {
-                  //  color: "rgba(0, 0, 0, 0)",
-                }
             }],
-            yAxes: [{
-              
-              gridLines: {
-                  //color: "rgba(0, 0, 0, 0)",
-              }   
-            }]
         },
 
 
-        
-
-
-
-
-
-          //* for delete the ids 
-          // scales: {
-          //   xAxes: [{
-          //       ticks: {
-          //           display: false //this will remove only the label
-          //       }
-          //   }]
-          // },
-
-
           scaleStartValue: 0,
+          
           plugins: {
+            datalabels: {
+                display: false,
+            },
             tooltip:{
               callbacks: {
                 label: function() {
@@ -96,17 +70,6 @@ finalNoteChart();
               display: false,
             },
 
-            //* Zoom 
-            // zoom: {
-            //   pan: {
-            //       enabled: true,
-            //       mode: 'xy'
-            //   },
-            //   zoom: {
-            //       enabled: true,
-            //       mode: 'xy',
-            //   }
-            // }
 
           }, 
           
@@ -118,16 +81,6 @@ finalNoteChart();
             document.cookie = parseInt(data.XLabels[idx]);
             location.href = "second_Just_one.html";
           },
-        //   hover: {
-        //     mode: 'nearest',
-        //     intersect: false,
-        //     onHover: function (e, item) {
-        //         if (item.length) {
-        //             const data = item[0]._chart.config.data.datasets[0].data[item[0]._index];
-        //             console.log(data.XLabels[0], data);
-        //         }
-        //     }
-        // }
           
       },
         
@@ -142,10 +95,10 @@ finalNoteChart();
       if (dataset.data[i] > colorChangeValue) {
         dataset.backgroundColor[i] = chartColors.blue;
         dataset.borderColor[i] = chartColors.blue;
-      }else{
+      }
+      else if(dataset.data[i] <= colorChangeValue){
         dataset.backgroundColor[i] = chartColors.red;
         dataset.borderColor[i] = chartColors.red;
-
       }
     }
   }

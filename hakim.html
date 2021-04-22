@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="hakim.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <!-- <div class="father-0">
+      <div class="father-1">
+        <-- <select name="department" id="department">
+          <option value="Informatique">Volvo</option>
+          <option value="Mathematique">Saab</option>
+          <option value="Science de la matier">Mercedes</option>
+        </select>
+        <select name="cycle" id="cycle">
+          <option value="master">Volvo</option>
+          <option value="licence">Saab</option>
+        </select>
+        <select name="year" id="year">
+          <option value="1">Volvo</option>
+          <option value="2">Saab</option>
+          <option value="3">Mercedes</option>
+        </select>
+        <select name="specialite" id="specialite">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select> --
+
+
+
+        <select id="type">
+          <option value="item0">--Select an Item--</option>
+          <option value="item1">item1</option>
+          <option value="item2">item2</option>
+          <option value="item3">item3</option>
+      </select>
+      
+      <select id="size">
+          <option value="">-- select one -- </option>
+      </select>
+
+
+      </div>
+    </div> -->
+
+
+
+    <div class="filter">
+      <select name="year">
+      <option value="all">Please Select</option>
+        <option value="1998">1998</option>
+        <option value="2000">2000</option>
+      </select>
+      <select name="location">
+      <option value="all">Please Select</option>
+        <option value="london">London</option>
+        <option value="paris">Paris</option>
+      </select>
+      <select name="other">
+      <option value="all">Please Select</option>
+        <option value="management-skills">Management Skills</option>
+        <option value="human-resources">Human Resources</option>
+        <option value="finance">Finance</option>
+      </select>
+      <button>reset</button>
+    </div>
+    
+    <table>
+      <tr class="all 2000 london finance">
+        <td>2000</td>
+        <td>London</td>
+        <td>Finance</td>
+      </tr>
+      <tr class="all 1998 paris human-resources">
+        <td>1998</td>
+        <td>Paris</td>
+        <td>Human Resources</td>
+      </tr>
+    </table>
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+<!-- <script>
+  $(document).ready(function () {
+    $("#type").change(function () {
+        var val = $(this).val();
+        if (val == "item1") {
+            $("#size").html("<option value='test'>item1: test 1</option><option value='test2'>item1: test 2</option>");
+        } else if (val == "item2") {
+            $("#size").html("<option value='test'>item2: test 1</option><option value='test2'>item2: test 2</option>");
+        } else if (val == "item3") {
+            $("#size").html("<option value='test'>item3: test 1</option><option value='test2'>item3: test 2</option>");
+        } else if (val == "item0") {
+            $("#size").html("<option value=''>--select one--</option>");
+        }
+    });
+});
+</script> -->
+
+<script>
+
+  // Filter 
+$(".filter select").on('change', function() {
+  var filters = $.map($(".filter select").toArray(), function(e) {
+    return $(e).val();
+  }).join(".");
+  $("table").find("tr").hide();
+  $("table").find("tr." + filters).show();
+});
+// Reset
+$('button').on('click', function(){
+  $(".filter select").val( $("option:first").val() );
+  $("table").find("tr").show();
+});
+
+</script>
+
+  </body>
+</html>

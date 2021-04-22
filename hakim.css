@@ -1,0 +1,29 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:rgb(119, 192, 192);
+}
+.father-0{
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 70vw;
+  height: 85vh;
+  display: flex;
+  margin: 45PX auto;
+  /* filter: blur(2px); */
+}
+.father-1{
+  background-color: rgba(255, 255, 255, 0.4);
+  
+  display: flex;
+  margin: 45PX auto;
+}
+select {
+  height:30px;
+  line-height:30px;
+  background:#f4f4f4;
+  margin: 30px;
+} 

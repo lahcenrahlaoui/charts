@@ -50,19 +50,13 @@ async function appVesitors(){
       }]
     },
     options: {
+      
       scales :{
-        x:{
-          title:{
-            color : 'red',
-            display :true,
-            text : 'month'
-          }
-        },
         xAxes: [{
           ticks: {
-              display: false //this will remove only the label
+            display: false //this will remove only the label
           }
-      }]
+        }]
       },
 
       plugins: {
