@@ -231,23 +231,25 @@ var list =[];
 //   });
 // });
 
-
-var elem = document.getElementById('class');
-  // elem.addEventListener('#class', function() {
-  //     classValue = document.getElementById("class").value;
-  //     yearValue = document.getElementById("year").value;
-  //     avgValue = document.getElementById("avg").value;
-  //     newValue = classValue + "_"+yearValue+"_"+avgValue+".csv";
-  //     console.log(" >>>>>     "+newValue);
-  //     genderChart();  
-  // }, false);
-
-
-  elem.addEventListener('change', (event) => {
-    classValue = document.getElementById("class").value;
-      yearValue = document.getElementById("year").value;
-      avgValue = document.getElementById("avg").value;
-    newValue = classValue + "_"+yearValue+"_"+avgValue+".csv";
-    console.log(newValue);
-    genderChart();  
+function fffff(){
+  myChart.destroy();
+  classValue = document.getElementById("class").value;
+  yearValue = document.getElementById("year").value;
+  avgValue = document.getElementById("avg").value;
+  newValue = classValue + "_"+yearValue+"_"+avgValue+".csv";
+  console.log(newValue);
+  genderChart();  
+}
+var classV = document.getElementById('class');
+var yearV = document.getElementById('year');
+var avrV = document.getElementById('avg');
+  classV.addEventListener('change', function(event)  {
+    fffff();
   });
+  yearV.addEventListener('change', function(event)  {
+    fffff();
+  });
+  avrV.addEventListener('change', function(event)  {
+    fffff();
+  });
+  
