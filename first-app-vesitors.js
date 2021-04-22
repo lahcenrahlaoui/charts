@@ -14,7 +14,7 @@ if (document.querySelector('input[name="type"]')) {
       chartType = event.target.value;
       console.log(chartType);
       if(bool)
-      destroyChart();
+        destroyChart();
       bool = true;
       appVesitors();
       finalNoteChart();
@@ -77,7 +77,7 @@ async function getDataVesitors(){
   const xs = [];
   const ys = [];
 
-  const  response = await fetch('first_visitors.csv');
+  const  response = await fetch('csv_files/first_visitors.csv');
   const data = await response.text();
   
   const table = data.split('\n').slice(1);

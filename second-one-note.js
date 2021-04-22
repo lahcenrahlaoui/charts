@@ -90,7 +90,7 @@ async function getDataForModule(){
   var xs = [];
   var ys = [];
   let i = 0;
-  const  response = await fetch('math_cs_students.csv');
+  const  response = await fetch('csv_files/math_cs_students.csv');
   const data = await response.text();
   const table = data.split('\n').slice(1);
   let average =[];

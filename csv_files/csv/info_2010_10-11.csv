@@ -1,0 +1,15 @@
+,id_student,id_course,average,bac_average,status
+0,14010996892,info,9.44,10.22,Admis/Dettes
+1,14010996947,info,8.25,10.66,Admis/Dettes
+2,14011097102,info,8.25,10.62,Admis/Dettes
+3,14011097242,info,12.75,10.25,Admis/Session1
+4,14011097416,info,7.44,10.88,Ajourné
+5,14011097462,info,14.75,10.93,Admis/Session1
+6,14011097464,info,8.75,10.52,Ajourné
+7,14011097484,info,10.38,10.74,Admis/Session2
+8,14011097494,info,11.38,10.06,Admis/Session1
+9,14011097506,info,7.38,10.07,Admis/Dettes
+10,14011097543,info,13.88,10.88,Admis/Dettes
+11,14011097551,info,14.13,10.28,Admis/Session1
+12,14011097571,info,4.75,10.0,Ajourné
+13,14011097609,info,9.63,10.8,Ajourné

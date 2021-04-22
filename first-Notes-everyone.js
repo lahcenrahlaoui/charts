@@ -126,7 +126,7 @@ async function getFinalNoteData(){
   var notes;
   
   // Get the data 
-  const  response = await fetch('math_cs_students.csv');
+  const  response = await fetch('csv_files/math_cs_students.csv');
   const data = await response.text();
   // Split the data 
   const table = data.split('\n').slice(1);

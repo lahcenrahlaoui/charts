@@ -48,7 +48,7 @@ async function getNationalityData(){
   // the labels 
   const nationality=['algérienne','others'];
 
-  const table = await fetchData('student_master.csv');
+  const table = await fetchData('csv_files/student_master.csv');
   // for loop for data 
   table.forEach(row =>{
     const columns = row.split(',');
@@ -98,7 +98,7 @@ async function getGenderData(){
   const gender=['male','female'];
   
 
-  const table = await fetchData('student_master.csv');
+  const table = await fetchData('csv_files/student_master.csv');
 
   table.forEach(row =>{
     const columns = row.split(',');
@@ -154,7 +154,7 @@ async function getSuperTenData(){
   var mynotes = [];
   let ids = []
 
-  const table = await fetchData('math_cs_students.csv');
+  const table = await fetchData('csv_files/math_cs_students.csv');
 
   table.forEach(row =>{
     const columns = row.split(',');
