@@ -10,15 +10,15 @@ body{
 .father-0{
   background-color: rgba(255, 255, 255, 0.4);
   width: 70vw;
-  height: 85vh;
+  height: 88vh;
   display: flex;
   margin: 45PX auto;
   /* filter: blur(2px); */
 }
 .father-1{
-  background-color: rgba(255, 255, 255, 0.4);
+  /* background-color: rgba(255, 255, 255, 0.4); */
   
-  display: flex;
+  /* display: flex; */
   margin: 45PX auto;
 }
 select {
@@ -27,3 +27,49 @@ select {
   background:#f4f4f4;
   margin: 30px;
 } 
+
+textarea{
+  display: flex;
+  margin: 10px auto;
+  padding: 5px;
+  font-size: 17px;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 40px;
+  font-size: 18px;
+  margin: 60px auto;
+}
+.btn-a{
+  background-color: rgba(32, 224, 199, 0.89);
+  border:1px solid rgb(11, 255, 223);
+  border-radius: 2px;
+}
+
+.select-css{
+  max-width: 150px;
+  min-width: 150px;
+  text-align-last: center;
+  border: 1.3px solid #555;
+}
+.select-css:hover{
+  background: red;
+}
+
+
+
+.op{
+  margin:20px;
+  background: green;
+}
+
+option{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding:0;
+}
+
