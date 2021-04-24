@@ -1,42 +1,3 @@
-/*
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-nav{
-	height: 10vh;
-}
-
-.nav-links{
-  list-style: none;
-  position: fixed;
-  background: rgb(119, 192, 192);
-  height: 100vh;
-  width: 100%;
-  clip-path: circle(100px at 100% -0%);
-  -webkit-clip-path: circle(100px at 110% -2%);
-  transition: all 1s ease-out;
-  pointer-events: none;
-}
-.nav-links.open{
-	clip-path: circle(100px at 90% -10%);
-  -webkit-clip-path: circle(550px at 100% -0%);
-  pointer-events: all;
-  padding:50px 0 0 75% ;
-}
-
-.nav-li{
-  margin: 35px;
-}
-
-
-
-*/
-
-
-
 
 nav {
   background:  rgb(51,51,51);
@@ -45,7 +6,7 @@ nav {
 }
 
 .nav-table {
-  padding-right: 100px;
+  padding-right: 50px;
   float: right;
 }
 
@@ -56,11 +17,11 @@ nav {
 li {
   float: left;
   padding: 15px 0;
-  margin-left: 90px;
+  margin-left: 50px;
   display: inline;
 }
 a {
-  font-size: 22px;
+  font-size: 17px;
   letter-spacing: 2px;
   color: #fff;
   text-decoration: none;
@@ -80,159 +41,10 @@ a:hover {
 }
 
 
-
-/*
-
-
-
-		.container{
-			width: 75%;
-			margin: 0 auto;
-			padding-top: 7px;
-		}
-		header{
-			background-color: rgb(51,51,51);
-			width: 100%;
-			height: 43px;
-		}
-		#logo{
-      color:white;
-      font-size:22px;
-			position: absolute;
-      top:8px;
-			left: 12%;
-			float: left;
-			margin-top: 1px;
-		}
-    #logo:hover{
-      cursor:pointer;
-			opacity: .6;
-			transition: .3s;
-		}
-		nav{
-			position: absolute;
-			left: 19%;
-			margin-top: 4px;
-		}
-		nav a{
-			text-decoration: none;
-			color: white;
-			margin-right: 70px;
-			font-size: 18px;
-		}
-		nav a:hover{
-			opacity: .5;
-			transition: .3s;
-		}
-		.right{
-			float: right;
-		}
-		#search{
-			position: absolute;
-			right: 244px;
-			margin-top: 7px;
-      color:white;
-      font-weight:normal;
-		}
-    #search:hover{
-      opacity: .5;
-			transition: .3s;
-      cursor:pointer;
-    }
-		#lock{
-      color:white;
-			margin-top: 6px;
-			margin-right: -3px;
-		}
-    #lock:hover{
-      opacity: .5;
-			transition: .3s;
-      cursor:pointer;
-    }
-		.banner{                
-			width: 100%;
-      height: 585px;
-      background-position:center;
-      background-size:cover;
-		}
-		*/
+.hafezrni-brand a{
+  font-size: 25px;
+  letter-spacing: 4px;
+  padding: 70px;
+}
 
 
-
-
-    .mode{
-      margin-left: 20px;
-      width: 40px;
-      height: 40px;
-    }
-
-
-    .m1{
-      visibility: visible;
-    }
-    .m2{
-      visibility: hidden;
-    }
-
-
-
-
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 60px;
-      height: 34px;
-    }
-    
-    .switch input { 
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #ccc;
-      -webkit-transition: .4s;
-      transition: .4s;
-    }
-    
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 26px;
-      width: 26px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white;
-      -webkit-transition: .4s;
-      transition: .4s;
-    }
-    
-    input:checked + .slider {
-      background-color: #2196F3;
-    }
-    
-    input:focus + .slider {
-      box-shadow: 0 0 1px #2196F3;
-    }
-    
-    input:checked + .slider:before {
-      -webkit-transform: translateX(26px);
-      -ms-transform: translateX(26px);
-      transform: translateX(26px);
-    }
-    
-    /* Rounded sliders */
-    .slider.round {
-      border-radius: 34px;
-    }
-    
-    .slider.round:before {
-      border-radius: 50%;
-    }

@@ -198,3 +198,5 @@ async function getSuperTenData(){
 
   return {XLabels , YLabels}; 
 }
+
+
