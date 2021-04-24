@@ -8,9 +8,6 @@ var prevVal = null;
 
 ///  14011097631
 var coc = parseInt(document.cookie.substring(0,11));
-console.log('im cookie   ');
-console.log(coc);
-console.log(typeof coc);
 
 // var strFirstThree = coc.substring(0,11);
 
@@ -55,6 +52,7 @@ var _myInterval = setInterval(function() {
 async function barForModule(){
   const data =  await getDataForModule();
   const ctx = document.getElementById('myChartx').getContext('2d');
+  //ctx.fillStyle = chart.config.options.chartArea.backgroundColor;
   myChart = new Chart(ctx,{
     type: 'bar',
     data: {
@@ -67,7 +65,7 @@ async function barForModule(){
           borderWidth: 3
       }]
     },
-    options: {
+    options: {  
       scales: {
         y: {
               max: 20

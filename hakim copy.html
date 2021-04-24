@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="hakimcopy.css">
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+  </head>
+  <body>
+    
+    <div class="father-0">
+      <div class="father-1">
+      <div class="split">
+
+        <div class="choose"> 
+          <div>
+            choose your option 
+          </div>
+        </div>
+        <div>
+          <button class="buttons" id="dp" >depa</button>
+        </div><br>
+        <div>
+          <button class="buttons" id ="et">etud</button>
+        </div> 
+      </div>
+      <div class="split">
+
+      
+      <div>
+        <select class="select-css f1" id="department">
+          <option value="item0">Department</option>
+          <option value="item1">Informatique</option>
+          <option value="item2">Mathematique</option>
+          <option value="item3">Science de la matiere</option>
+        </select>
+      </div>
+      
+      <div>  
+        <select class="select-css f1" id="cycle">
+          <option value="">Cycle</option>
+        </select>
+      </div>
+      <div>  
+        <select class="select-css f1" id="year">
+          <option value="">-- select one -- </option>
+        </select>
+      </div>
+        
+      <div>
+        <select class="select-css f1" id="speciality">
+          <option value="">-- select one -- </option>
+        </select>
+      </div>
+    </div>
+      <div class="make-it-center inin">
+        <div class="search ">
+          <input type="text"  id="input-id" class="search__input" placeholder="Search...">
+            <div class="search__icon">
+              <ion-icon  name="search"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+      <textarea class="f1 inin" rows="12" cols="65"></textarea>
+      
+      <div class="btn-father">
+        <button class="btn f1 inin"> Send </button>
+      </div> 
+
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+<script>
+  $(document).ready(function () {
+    $("#department").change(function () {
+        var val = $(this).val();
+        if (val == "item1") {
+            $("#cycle").html("<option value='blanck'>Cycle</option><option value='cycleM'>Master</option><option value='cycleL'>Licence</option>");
+            $("#year").html("<option value='blanck'>select one--</option>");
+            $("#speciality").html("<option value=''>--select one--</option>");
+          } else if (val == "item2") {
+            $("#cycle").html("<option value='blanck'>--select one--</option><option value='cycleM'>Master</option><option value='cycleL'>Licence</option>");
+            $("#year").html("<option value='blanck'>select one--</option>");
+            $("#speciality").html("<option value=''>--select one--</option>");
+          } else if (val == "item3") {
+            $("#cycle").html("<option value='blanck'>--select one--</option><option value='cycleM'>Master</option><option value='cycleL'>Licence</option>");
+            $("#year").html("<option value='blanck'>select one--</option>");
+            $("#speciality").html("<option value=''>--select one--</option>");
+          } else if (val == "item0") {
+            
+          }
+    });
+  });
+  $(document).ready(function () {
+    $("#cycle").change(function () {
+        var val = $(this).val();
+        if (val == "cycleL") {
+            $("#year").html("<option value='blanck'>--select one--</option><option value='year1'>Licence 1</option><option value='year2'>Licence 2</option><option value='year3'>Licence 3</option>");
+            $("#speciality").html("<option value=''>--select one--</option>");
+          } else if (val == "cycleM") {
+            $("#year").html("<option value='blanck'>--select one--</option><option value='year4'>Master 1 </option><option value='year5'>Master 2 </option>");
+            $("#speciality").html("<option value=''>--select one--</option>");
+        } else if(val == "blanck") {
+            $("#year").html("<option value='blanck'>select one--</option>");
+        }
+    });
+  });
+
+  $(document).ready(function () {
+    $("#year").change(function () {
+        var val = $(this).val();
+        var s = $("#department").val();
+        if (((val == "year4")||(val == "year5"))&&(s == "item1")) {
+            $("#speciality").html("<option value=''>--select one--</option><option value='sp1'>GL</option><option value='sp1'>GI</option><option value='sp1'>RT</option>");
+        } else if (((val == "year4")||(val == "year5"))&&(s == "item2")) {
+            $("#speciality").html("<option value=''>--select one--</option><option value='sp1'>G il</option><option value='year5'>GM </option>");
+        } else {
+            $("#speciality").html("<option value=''>--select one--</option>");
+        }
+    });
+  });
+</script>
+
+<script>
+
+//   // Filter 
+// $(".filter select").on('change', function() {
+//   var filters = $.map($(".filter select").toArray(), function(e) {
+//     return $(e).val();
+//   }).join(".");
+//   $("table").find("tr").hide();
+//   $("table").find("tr." + filters).show();
+// });
+// // Reset
+// $('button').on('click', function(){
+//   $(".filter select").val( $("option:first").val() );
+//   $("table").find("tr").show();
+// });
+
+// </script>
+<script>
+$(document).ready(function(){
+  $("#dp").click(function(){
+    $(".f1").toggle();
+    $(".buttons").toggle();
+    $(".choose").toggle();
+    // $("#et").toggle();
+  });
+});
+
+
+$(document).ready(function(){
+  $("#et").click(function(){
+    $(".inin").toggle();
+    $(".buttons").toggle();
+    $(".choose").toggle();
+  });
+});
+
+
+  </script>
+  </body>
+</html>

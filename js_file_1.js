@@ -1,11 +1,17 @@
 const hamburger= document.querySelector(".hamburger");
 const navlinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
-
+const lines = document.querySelector(".line");
 var nav_bool= false;
+
+// ham.addEventListener('click',()=>{
+//   lines.classList.add("linecolor");
+// });
 
 hamburger.addEventListener('click',()=>{
   navlinks.classList.add("open");
+  lines.classList.add("linecolor");
+
   console.log("hamburger");
 
 });

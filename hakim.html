@@ -3,137 +3,95 @@
   <head>
     <link rel="stylesheet" href="hakim.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/css/uikit.min.css" />
-    <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/js/uikit-icons.min.js"></script>
-
-
-
+    <script src="hakim.js"></script>
 
   </head>
   <body>
     <div class="father-0">
       <div class="father-1">
-        <!-- <select class="select-css" name="department" id="department">
-          <option value="Informatique">Volvo</option>
-          <option value="Mathematique">Saab</option>
-          <option value="Science de la matier">Mercedes</option>
+        <button class="select-css" id="dp" >depa</button>
+        <button class="select-css" id ="et">etud</button>
+        <select class="select-css f1" id="department">
+            <option value="item0">Department</option>
+            <option value="item1">Informatique</option>
+            <option value="item2">Mathematique</option>
+            <option value="item3">Science de la matiere</option>
         </select>
-        <select class="select-css" name="cycle" id="cycle">
-          <option value="master">Volvo</option>
-          <option value="licence">Saab</option>
+        <select class="select-css f1" id="cycle">
+            <option value="">Choose Cycle</option>
         </select>
-        <select class="select-css" name="year" id="year">
-          <option value="1">Volvo</option>
-          <option value="2">Saab</option>
-          <option value="3">Mercedes</option>
+        <select class="select-css f1" id="year">
+          <option value="">Choose Year</option>
         </select>
-        <select class="select-css" name="specialite" id="specialite">
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="mercedes">Mercedes</option>
-          <option value="audi">Audi</option>
-        </select> -->
-
-
-
-        <button class="uk-button uk-button-default" type="button"><div id="demo"></div></button>
-        <div uk-dropdown>
-            <ul class="uk-nav uk-dropdown-nav">
-                <li>Informatique</li>
-                <li>Mathematique</li>
-                <li>Science de la matiere</li>
-            </ul>
+        <select class="select-css f2" id="speciality">
+          <option value="">Choose Speacialety</option>
+        </select>
+        <div class="make-it-center input-toggle">
+          <div>
+            <input type="number" class="input-style" id="input-id"/>
+          </div>
         </div>
-
-
-
-        <select class="select-css" id="department">
-          <option value="item0">Department</option>
-          <option value="item1">Informatique</option>
-          <option value="item2">Mathematique</option>
-          <option value="item3">Science de la matiere</option>
-      </select>
-      
-      <select class="select-css" id="cycle">
-          <option value="">Cycle</option>
-      </select>
-      <select class="select-css" id="year">
-        <option value="">-- select one -- </option>
-      </select>
-      
-      
-      <select class="select-css" id="speciality">
-        <option value="">-- select one -- </option>
-      </select>
-<br>
-      <!-- <div>dfsdafsad</div> -->
-      <textarea rows="12" cols="65"></textarea>
-      <button class="btn btn-a"> Send </button>
-    </div>
-
-    </div>
-
-
-<!-- 
-    <div class="filter">
-      <select class="select-css" name="year">
-      <option value="all">Please Select</option>
-        <option value="1998">1998</option>
-        <option value="2000">2000</option>
-      </select>
-      <select class="select-css" name="location">
-      <option value="all">Please Select</option>
-        <option value="london">London</option>
-        <option value="paris">Paris</option>
-      </select>
-      <select class="select-css" name="other">
-      <option value="all">Please Select</option>
-        <option value="management-skills">Management Skills</option>
-        <option value="human-resources">Human Resources</option>
-        <option value="finance">Finance</option>
-      </select>
-      <button>reset</button>
+      </div>
     </div>
     
-    <table>
-      <tr class="all 2000 london finance">
-        <td>2000</td>
-        <td>London</td>
-        <td>Finance</td>
-      </tr>
-      <tr class="all 1998 paris human-resources">
-        <td>1998</td>
-        <td>Paris</td>
-        <td>Human Resources</td>
-      </tr>
-    </table>
- -->
+    
+    <div class="grid input-toggle">  
+      <div class="div-grid">
+        <div class="div-not-block">User ID       </div>  <div class="div-not-block">:</div> <div class="div-hide"></div> <div class="div-not-block div-show" id="user-id"></div>    
+        <div class="div-not-block">first name    </div>  <div class="div-not-block">:</div> <div class="div-hide"></div> <div class="div-not-block div-show" id="fisrt-name"></div> 
+        <div class="div-not-block">last  name    </div>  <div class="div-not-block">:</div> <div class="div-hide"></div> <div class="div-not-block div-show" id="last-name"></div>  
+        <div class="div-not-block">departmet     </div>  <div class="div-not-block">:</div> <div class="div-hide"></div> <div class="div-not-block div-show" id="department-name"></div>   
+        <div class="div-not-block">Cycle         </div>  <div class="div-not-block">:</div> <div class="div-hide"></div> <div class="div-not-block div-show" id="cycle-name"></div>   
+        <div class="div-not-block">year          </div>  <div class="div-not-block">:</div> <div class="div-hide"></div> <div class="div-not-block div-show" id="year-date"></div>      
+        <div class="div-not-block">speciality    </div>  <div class="div-not-block">:</div> <div class="div-hide"></div> <div class="div-not-block div-show" id="speciality-name"></div>
+      </div>
+    </div>
+    <div class="make-it-center">
+      <button class="btn input-toggle" id="showtext">
+        Write message
+      </button>
+    </div>
+      
+      <div class="f1 inin">
+        <textarea class="vcheck" rows="12" cols="55" id="texta"></textarea>
+        <div class="btn-father">
+          <button class="btn" id="btn"> Send </button>
+        </div> 
+      </div>
+
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+
 <script>
   $(document).ready(function () {
     $("#department").change(function () {
         var val = $(this).val();
         if (val == "item1") {
-            $("#cycle").html("<option value='blanck'>Cycle</option><option value='cycleM'>Master</option><option value='cycleL'>Licence</option>");
-            $("#year").html("<option value='blanck'>select one--</option>");
-            $("#speciality").html("<option value=''>--select one--</option>");
+            $("#cycle").html("<option value='blanck'>Choose Cycle</option><option value='cycleM'>Master</option><option value='cycleL'>Licence</option>");
+            $("#year").html("<option value='blanck'>Choose Year</option>");
+            $("#speciality").html("<option value=''>Choose Speacialety</option>");
+            $("#speciality").hide(500);
+
           } else if (val == "item2") {
-            $("#cycle").html("<option value='blanck'>--select one--</option><option value='cycleM'>Master</option><option value='cycleL'>Licence</option>");
-            $("#year").html("<option value='blanck'>select one--</option>");
-            $("#speciality").html("<option value=''>--select one--</option>");
+            $("#cycle").html("<option value='blanck'>Choose Cycle</option><option value='cycleM'>Master</option><option value='cycleL'>Licence</option>");
+            $("#year").html("<option value='blanck'>Choose Year</option>");
+            $("#speciality").html("<option value=''>Choose Speacialety</option>");
+            $("#speciality").hide(500);
+
           } else if (val == "item3") {
-            $("#cycle").html("<option value='blanck'>--select one--</option><option value='cycleM'>Master</option><option value='cycleL'>Licence</option>");
-            $("#year").html("<option value='blanck'>select one--</option>");
-            $("#speciality").html("<option value=''>--select one--</option>");
+            $("#cycle").html("<option value='blanck'>Choose Cycle</option><option value='cycleM'>Master</option><option value='cycleL'>Licence</option>");
+            $("#year").html("<option value='blanck'>Choose Year</option>");
+            $("#speciality").html("<option value=''>Choose Specialey</option>");
+            $("#speciality").hide(500);
+
           } else if (val == "item0") {
+            $("#speciality").hide(500);
+
             
           }
     });
@@ -142,13 +100,31 @@
     $("#cycle").change(function () {
         var val = $(this).val();
         if (val == "cycleL") {
-            $("#year").html("<option value='blanck'>--select one--</option><option value='year1'>Licence 1</option><option value='year2'>Licence 2</option><option value='year3'>Licence 3</option>");
-            $("#speciality").html("<option value=''>--select one--</option>");
+            $("#year").html("<option value='blanck'>Choose Year</option><option value='year1'>Licence 1</option><option value='year2'>Licence 2</option><option value='year3'>Licence 3</option>");
+            $("#speciality").html("<option value=''>Choose Speacialety</option>");
+            $("#speciality").hide(500);
+
           } else if (val == "cycleM") {
-            $("#year").html("<option value='blanck'>--select one--</option><option value='year4'>Master 1 </option><option value='year5'>Master 2 </option>");
-            $("#speciality").html("<option value=''>--select one--</option>");
+            $("#year").html("<option value='blanck'>Choose Year</option><option value='year4'>Master 1 </option><option value='year5'>Master 2 </option>");
+            
+            /* */
+            // fade in 
+            $("#department").fadeToggle(10);
+            $("#cycle").fadeToggle(10);
+            $("#year").fadeToggle(10);
+            // fade out 
+            $("#department").fadeToggle(500);
+            $("#cycle").fadeToggle(500);
+            $("#year").fadeToggle(500);
+            /**/
+            //fade out 
+            $("#speciality").show(500);
+
+            $("#speciality").html("<option value=''>Choose Speacialety</option>");
         } else if(val == "blanck") {
-            $("#year").html("<option value='blanck'>select one--</option>");
+            $("#year").html("<option value='blanck'>Choose Year</option>");
+            $("#speciality").hide(500);
+
         }
     });
   });
@@ -158,20 +134,17 @@
         var val = $(this).val();
         var s = $("#department").val();
         if (((val == "year4")||(val == "year5"))&&(s == "item1")) {
-            $("#speciality").html("<option value=''>--select one--</option><option value='sp1'>GL</option><option value='sp1'>GI</option><option value='sp1'>RT</option>");
+            $("#speciality").html("<option value=''>Choose Speacialety</option><option value='sp1'>GL</option><option value='sp1'>GI</option><option value='sp1'>RT</option>");
         } else if (((val == "year4")||(val == "year5"))&&(s == "item2")) {
-            $("#speciality").html("<option value=''>--select one--</option><option value='sp1'>G il</option><option value='year5'>GM </option>");
+            $("#speciality").html("<option value=''>Choose Speacialety</option><option value='sp1'>G il</option><option value='year5'>GM </option>");
         } else {
-            $("#speciality").html("<option value=''>--select one--</option>");
+            $("#speciality").html("<option value=''>Choose Speacialety</option>");
         }
     });
   });
 </script>
 
 <script>
-
-document.getElementById("demo").innerHTML = "Department";
-
 
 //   // Filter 
 // $(".filter select").on('change', function() {
@@ -188,6 +161,101 @@ document.getElementById("demo").innerHTML = "Department";
 // });
 
 // </script>
+<script>
+$(document).ready(function(){
+  $("#dp").click(function(){
+    $(".f1").delay(500).fadeToggle(500);
+    $("#dp").fadeToggle(500);
+    $("#et").fadeToggle(500);
+
+    $('.father-0').css({'height':'auto','margin':'60px auto'});
+
+  });
+});
+
+
+$(document).ready(function(){
+  $("#et").click(function(){
+    $(".input-toggle").delay(500).fadeToggle(500);
+    $("#dp").fadeToggle(500);
+    $("#et").fadeToggle(500);
+
+    $('.father-0').css({'height':'auto','margin':'60px auto'});
+
+
+  });
+});
+
+
+  </script>
+
+
+<script>
+  // On change in any of the fields with the class vcheck we run this function
+  $('.vcheck').change(function() {
+      // We store the values of each input field in a variable
+      var send = $('#texta').val();
+      // We check for null (empty) values
+      if (send == '') {
+          // When we find something blank set or keep the button to disabled
+          $('#btn').addClass('disabled', 'disabled');
+      } else {
+          // When all conditions are met and values are good we enable the button
+          $('#btn').removeClass('disabled');
+      }
+  });
+</script>
+
+<script>
+
+
+// window.setInterval(function(){
+  
+//   if( $("#speciality").is(":visible")){
+//     if($('#speciality').val()){
+//       console.log("spe yes");  
+//       $('.father-0').hide();
+
+
+//         $(".hhh").css('visibility', 'visible');
+
+//     }
+
+//   }
+//   else{
+//           if( ($('#year').val()== 'year1') ||
+//               ($('#year').val()== 'year2') ||
+//               ($('#year').val()== 'year3') ||
+//               ($('#year').val()== 'year4') ||
+//               ($('#year').val()== 'year5'))
+//           {
+//                 $('.father-0').hide();
+//                 console.log("year yes");  
+
+//           }
+//           else
+//           {
+//                 console.log("year no ");    
+//           }
+//   }
+//   if(xxx){
+
+//   }
+// }, 1000);
+
+
+
+
+$( "#showtext" ).click(function() {
+  $( ".input-toggle" ).fadeToggle();
+$(".inin").delay(300).fadeToggle(1500);
+
+});
+
+</script>
+
+
+
 
   </body>
 </html>
