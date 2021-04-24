@@ -147,7 +147,7 @@ async function getSuperTenData(){
   let i = 0;
   let j = 0;
 
-  const status=['super','under'];
+  const status=['Above','Under'];
 
   var id_test = 0 ;
   var notes;

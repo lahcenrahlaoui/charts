@@ -105,8 +105,8 @@ finalNoteChart();
 }
 
 var chartColors = {
-  red: 'rgb(255, 50, 50)',
-  blue: 'rgb(54, 50, 235)'
+  blue: 'rgb(119, 192, 192)',
+  red: 'rgb(255, 75, 75)'
 };
 
 

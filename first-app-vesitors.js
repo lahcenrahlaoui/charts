@@ -44,19 +44,48 @@ async function appVesitors(){
         data: data.ys,
         tension: 0.4,
         fill:false,
+        color:'red',
         backgroundColor:'rgb(119, 192, 192)',
         borderColor:'rgb(119, 192, 192)',
         borderWidth: 3
       }]
     },
     options: {
-      
+      title: {
+          display: true,
+          fontColor: 'blue',
+          text: 'App vesitors'
+      }     ,
+      scales: {
+          yAxes: [{
+              ticks: {
+                  beginAtZero:true,
+                  fontColor: 'green'
+              },
+          }],
+        xAxes: [{
+              ticks: {
+                  fontColor: 'green'
+              },
+          }]
+      } ,
+
+      tooltips: {
+        callbacks: {
+            label: function(tooltipItem) {
+                  return tooltipItem.yLabel;
+            }
+        }
+      },
+
+
       scales :{
         xAxes: [{
           ticks: {
-            display: false //this will remove only the label
-          }
-        }]
+            display: false, 
+
+          },
+        }],
       },
 
       plugins: {
