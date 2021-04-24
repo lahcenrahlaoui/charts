@@ -1,7 +1,7 @@
 // declaration of variables 
 
 
-var chartType  =  document.querySelector('input[name="type"]:checked').value;
+var chartType  = 'line';//  document.querySelector('input[name="type"]:checked').value;
 
 // declaration of chart type 
 var myChart = null;
