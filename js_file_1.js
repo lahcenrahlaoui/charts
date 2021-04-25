@@ -8,13 +8,7 @@ var nav_bool= false;
 //   lines.classList.add("linecolor");
 // });
 
-hamburger.addEventListener('click',()=>{
-  navlinks.classList.add("open");
-  lines.classList.add("linecolor");
 
-  console.log("hamburger");
-
-});
 
 const mybody= document.querySelector(".mybody");
 
@@ -80,3 +74,5 @@ function isNumber(evt) {
 //   setVisible('.loadd', false);
 
 // });
+
+
