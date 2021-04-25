@@ -3,14 +3,13 @@
   <head>
 
 
-    <script src="hakim.js"></script>
     <link rel="stylesheet" href="hakim.css">
     <link rel="stylesheet" href="navstyle.css">
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
 
+    <script src="hakim.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
   
 
   </head>
@@ -20,7 +19,7 @@
       <div class="nav-container">
         <div class="not-nav-table">
           <li class="hafezrni-brand">
-            <a hred="#">HAFFEZNI</a>
+            <a hred="#">HAFEZNI</a>
           </li>
         </div>
           <div class="nav-table">
@@ -44,8 +43,8 @@
 
     <div class="father-0">
       <div class="father-1">
-        <button class="select-css" id="dp" >depa</button>
-        <button class="select-css" id ="et">etud</button>
+        <button class="select-css" id="dp" >Department </button>
+        <button class="select-css" id ="et">Student </button>
         <select class="select-css f1" id="department">
             <option value="item0">Department</option>
             <option value="item1">Informatique</option>
@@ -62,7 +61,7 @@
           <option value="">Choose Speacialety</option>
         </select>
         <div class="make-it-center input-toggle">
-            <input type="number" class="input-style" id="input-id"/>
+            <input type="number" placeholder="#ID" class="input-style" id="input-id"/>
         </div>
       </div>
     </div>
@@ -119,6 +118,9 @@
             $("#speciality").hide(500);
 
           } else if (val == "item0") {
+            $("#cycle").html("<option value='blanck'>Choose Cycle</option>");
+            $("#year").html("<option value='blanck'>Choose Year</option>");
+
             $("#speciality").hide(500);
 
             

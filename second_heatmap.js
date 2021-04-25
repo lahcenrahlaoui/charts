@@ -1,4 +1,31 @@
 
+
+// var x = new Date();
+// x.setFullYear(2020, 09, 17);
+
+// var y = new Date();
+// y.setFullYear(2021, 06, 16);
+// var j = 1;
+// var count = 0;
+
+// //getting the all fridays in a financial year
+// for ( var i = 0; x<y; i += j) {
+//     if (x.getDay() == 5) {
+//         document.write("Date : " + x.getDate() + "/" + (x.getMonth() + 1) + "<br>");
+//         x = new Date(x.getTime() + (7 * 24 * 60 * 60 * 1000));
+//         j = 7;
+//         count++;
+//     } else {
+//         j = 1;
+//          x = new Date(x.getTime() + (24 * 60 * 60 * 1000));
+//     }
+// }
+
+
+
+
+
+
 // function for get data 
 async function getDataHeatMap(){
   console.log("IM MARIOOOOO ");
@@ -68,7 +95,9 @@ async function heatMapChart(){
     data:data,
 
 
-    colors: [ '#d0fff0', '#ade8f4', '#90e0ef', '#48cae4','#00b4d8'],
+    colors: [ '#ebedf0', '#ade8f4', '#90e0ef', '#48cae4','#0073CF'],
 
   });
 }
+
+

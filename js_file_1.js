@@ -1,28 +1,28 @@
-const hamburger= document.querySelector(".hamburger");
-const navlinks = document.querySelector(".nav-links");
-const links = document.querySelectorAll(".nav-links li");
-const lines = document.querySelector(".line");
-var nav_bool= false;
+// const hamburger= document.querySelector(".hamburger");
+// const navlinks = document.querySelector(".nav-links");
+// const links = document.querySelectorAll(".nav-links li");
+// const lines = document.querySelector(".line");
+// var nav_bool= false;
 
-// ham.addEventListener('click',()=>{
-//   lines.classList.add("linecolor");
+// // ham.addEventListener('click',()=>{
+// //   lines.classList.add("linecolor");
+// // });
+
+
+
+// const mybody= document.querySelector(".mybody");
+
+// mybody.addEventListener('click',()=>{
+//   const test_navlinks = document.querySelector(".nav-links");
+
+//   if((test_navlinks.classList.contains('open')) && (nav_bool)){
+//     navlinks.classList.remove("open");
+//     nav_bool = !nav_bool;
+//   }else{
+//     nav_bool = !nav_bool;
+//   }
+
 // });
-
-
-
-const mybody= document.querySelector(".mybody");
-
-mybody.addEventListener('click',()=>{
-  const test_navlinks = document.querySelector(".nav-links");
-
-  if((test_navlinks.classList.contains('open')) && (nav_bool)){
-    navlinks.classList.remove("open");
-    nav_bool = !nav_bool;
-  }else{
-    nav_bool = !nav_bool;
-  }
-
-});
 
 
 

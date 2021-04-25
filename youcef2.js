@@ -27,6 +27,8 @@ async function fetchData(file){
               label: 'csv',
               data: data.YLabels,
               showLine:true,
+              backgroundColor:'rgb(119, 192, 192)',
+              borderColor:'rgb(119, 192, 192)',
             }]
           }
       });

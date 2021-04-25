@@ -3,11 +3,12 @@
 var myChart = null;
 var bool =false;
 var changeval = null;
-var newValue ;
+var newValue= 0  ;
 var prevVal = null;
 
 ///  14011097631
-var coc = parseInt(document.cookie.substring(0,11));
+var coc='';
+coc = parseInt(document.cookie.substring(0,11));
 
 // var strFirstThree = coc.substring(0,11);
 
@@ -67,9 +68,19 @@ async function barForModule(){
     },
     options: {  
       scales: {
+        yAxes: [{
+          ticks: {
+              beginAtZero: true,
+              max :20,
+              min :0
+          }
+        }],
         y: {
               max: 20
-          }
+          },
+        x:{
+          min:0,
+        }
       },
       plugins: {
         title: {

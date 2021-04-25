@@ -152,7 +152,7 @@ var list =[];
   async function genderChart(){
     const data =  await getGenderData();
     const ctx = document.getElementById('youcefChart').getContext('2d');
-     myChart = new Chart(ctx,{
+      myChart = new Chart(ctx,{
       type: 'bar',
       data: {
         labels: data.XLabels,
@@ -160,7 +160,27 @@ var list =[];
               label: 'csv',
               data: data.YLabels,
               showLine:true,
+              
+                backgroundColor:'rgb(119, 192, 192)',
+                borderColor:'rgb(119, 192, 192)',
             }]
+          },
+          options: {  
+            scales: {
+              yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    max :20,
+                    min :0
+                }
+              }],
+              y: {
+                    max: 20
+                },
+              x:{
+                min:0,
+              }
+            },
           }
       });
   }
@@ -231,7 +251,7 @@ var list =[];
 //   });
 // });
 
-function fffff(){
+function fileName(){
   myChart.destroy();
   classValue = document.getElementById("class").value;
   yearValue = document.getElementById("year").value;
@@ -244,12 +264,12 @@ var classV = document.getElementById('class');
 var yearV = document.getElementById('year');
 var avrV = document.getElementById('avg');
   classV.addEventListener('change', function(event)  {
-    fffff();
+    fileName();
   });
   yearV.addEventListener('change', function(event)  {
-    fffff();
+    fileName();
   });
   avrV.addEventListener('change', function(event)  {
-    fffff();
+    fileName();
   });
   

@@ -48,14 +48,7 @@ body{
 {
   min-width:700px;
 }
-.input-section{
-  text-align: center;
-  margin: 0 auto;
-  padding: 20px;
-  background: #e5e5e5;
-  border-radius: 5px;
-  
-}
+
 
 
 .grid-container {
@@ -271,4 +264,9 @@ table th.last {
 .newnewnew{
   width:1000px;
   height: 900px;
+}
+
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }

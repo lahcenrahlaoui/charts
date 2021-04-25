@@ -63,27 +63,6 @@ function changeData(){
   document.getElementById("speciality-name").innerHTML = speciality;
   document.getElementById("year-date").innerHTML = year;
 
-  document.getElementById("n-1").innerHTML = firstName;    
-  document.getElementById("d-1").innerHTML = department;  
-  document.getElementById("s-1").innerHTML = speciality;  
-  document.getElementById("y-1").innerHTML = year;        
-
-  document.getElementById("n-2").innerHTML = firstName;   
-  document.getElementById("d-2").innerHTML = department;    
-  document.getElementById("s-2").innerHTML = speciality;  
-  document.getElementById("y-2").innerHTML = year;          
-
-  document.getElementById("n-3").innerHTML =firstName; 
-  document.getElementById("d-3").innerHTML =department;
-  document.getElementById("s-3").innerHTML =speciality;
-  document.getElementById("y-3").innerHTML =year;      
-
-  document.getElementById("n-4").innerHTML = firstName; 
-  document.getElementById("d-4").innerHTML = department;
-  document.getElementById("s-4").innerHTML = speciality;
-  document.getElementById("y-4").innerHTML = year;      
-
-
 
 
   $(".div-hide").delay().fadeOut(150);
