@@ -1,0 +1,43 @@
+
+.center-dot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20% 0 ;
+}
+.dot-typing {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: rgb(119, 192, 192);
+  color: rgb(119, 192, 192);
+  box-shadow: 9984px 0 0 0 rgb(119, 192, 192), 9999px 0 0 0 rgb(119, 192, 192), 10014px 0 0 0 rgb(119, 192, 192);
+  animation: dotTyping 1.5s infinite linear;
+}
+
+@keyframes dotTyping {
+  0% {
+    box-shadow: 9984px 0 0 0 rgb(119, 192, 192), 9999px 0 0 0 rgb(119, 192, 192), 10014px 0 0 0 rgb(119, 192, 192);
+  }
+  16.667% {
+    box-shadow: 9984px -10px 0 0 rgb(119, 192, 192), 9999px 0 0 0 rgb(119, 192, 192), 10014px 0 0 0 rgb(119, 192, 192);
+  }
+  33.333% {
+    box-shadow: 9984px 0 0 0 rgb(119, 192, 192), 9999px 0 0 0 rgb(119, 192, 192), 10014px 0 0 0 rgb(119, 192, 192);
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 rgb(119, 192, 192), 9999px -10px 0 0 rgb(119, 192, 192), 10014px 0 0 0 rgb(119, 192, 192);
+  }
+  66.667% {
+    box-shadow: 9984px 0 0 0 rgb(119, 192, 192), 9999px 0 0 0 rgb(119, 192, 192), 10014px 0 0 0 rgb(119, 192, 192);
+  }
+  83.333% {
+    box-shadow: 9984px 0 0 0 rgb(119, 192, 192), 9999px 0 0 0 rgb(119, 192, 192), 10014px -10px 0 0 rgb(119, 192, 192);
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 rgb(119, 192, 192), 9999px 0 0 0 rgb(119, 192, 192), 10014px 0 0 0 rgb(119, 192, 192);
+  }
+}
+

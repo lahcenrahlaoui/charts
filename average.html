@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+      <title> first page </title>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet"/>
+    
+
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="navstyle.css">
+
+      <style>
+        .input-css-margin{
+          margin: 0 10px;
+          width: 180px;
+        }
+        select {
+          height:30px;
+          line-height:30px;
+          background:#f4f4f4;
+          margin: 30px;
+        } 
+      </style>
+    </head>
+    <body>
+      <nav>
+        <div class="nav-container">
+          <div class="not-nav-table">
+            <li class="hafezrni-brand">
+              <a hred="#">HAFFEZNI</a>
+            </li>
+          </div>
+            <div class="nav-table">
+                <ul class="nav-navbar">
+                    <li>
+                        <a href="first_visialusation_all_students.html" >home</a> 
+                    </li>
+                    <li>
+                        <a href="second_Just_one.html" >individial</a>
+                    </li>
+                    <li>
+                        <a href="announcment.html" >announcment</a>
+                    </li>
+                    <li>
+                        <a href="average.html" >by average</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+      <!-- <div class="make-it-center">
+        <div class="input-section">
+            <input id="input-id-class" class="input-id-css input-css-margin"  placeholder="class" type="text" name="type"  />
+            <input id="input-id-year" class="input-id-css input-css-margin"  placeholder="year" type="text" name="type"  />
+            <input id="input-id-min" class="input-id-css input-css-margin"  placeholder="min average" type="text" name="type"  />
+            <!-- <input id="input-id-max" class="input-id-css input-css-margin"  placeholder="max average" type="text" name="type"  /> --
+          </div>
+      </div> -->
+
+      <div class="make-it-center">
+        <div class="input-section">
+          <select id="class">
+            <option value="Agl">Algorithme</option>
+            <option value="ALG1"> Algebre 1 </option>
+            <option value="Algé2">Algebre 2</option>
+            <option value="Aly2">analyse 2 </option>
+            <option value="Analy">Analyse</option>
+            <option value="CF">CF</option>
+            <option value="Chim">Chim</option>
+            <option value="Elect">Elect</option>
+            <option value="His-s">His-s</option>
+            <option value="info">Informatique 1 </option>
+            <option value="Info2">Informatique 2 </option>
+            <option value="Mecaq">Mecanique</option>
+            <option value="StatD">statistique</option>
+            <option value="STRM">STRM</option>
+            <option value="TEC1">TEC1</option>
+            <option value="Tecw">Tecw</option>
+            <option value="TPBUR">TPBUR</option>
+          </select>
+          <select id="year">
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+          </select>
+          <select id="avg">
+            <option value="10-11">10-11</option>
+            <option value="11-12">11-12</option>
+            <option value="12-13">12-13</option>
+            <option value="13-14">13-14</option>
+            <option value="14-15">14-15</option>
+            <option value="15-16">15-16</option>
+            <option value="16-17">16-17</option>
+            <option value="17-18">17-18</option>
+            <option value="18-19">18-19</option>
+            <option value="19-20">19-20</option>
+          </select>
+        
+        </div>
+      </div>
+      <div class="make-it-center">
+        <div class="chart-style">
+            <canvas id="youcefChart"></canvas>
+          </div>
+        </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+
+    <!-- they are the same -->
+    <script src="youcef1.js"></script>
+    <!-- <script src="youcef2.js"></script> -->
+
+
+
+    <div id='fileNames'></div>
+<script>
+
+  
+</script>
+  
+</body>
+</html>

@@ -1,34 +1,38 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+
+nav {
+  background:  rgb(51,51,51);
+  height: 55px;
+  margin-bottom: 15px;
 }
 
-nav{
-	height: 10vh;
+.nav-table {
+  padding-right: 50px;
+  float: right;
 }
 
-.nav-links{
+.nav-navbar {
   list-style: none;
-  position: fixed;
-  background: rgb(119, 192, 192);
-  height: 100vh;
-  width: 100%;
-  clip-path: circle(100px at 100% -0%);
-  -webkit-clip-path: circle(100px at 96% -2%);
-  transition: all 1s ease-out;
-  pointer-events: none;
-}
-.nav-links.open{
-	clip-path: circle(100px at 90% -10%);
-  -webkit-clip-path: circle(550px at 100% -0%);
-  pointer-events: all;
-  padding:50px 0 0 75% ;
 }
 
-.nav-li{
-  margin: 35px;
+li {
+  float: left;
+  padding: 15px 0;
+  margin-left: 50px;
+  display: inline;
 }
+a {
+  font-size: 17px;
+  letter-spacing: 2px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+a:hover {
+  color:  rgb(160, 0, 0);
+  transition: 0.3s ease-in;
+}
+
 
 .nav-links li a {
 	color: white;
@@ -36,19 +40,11 @@ nav{
 	font-size: 26px;
 }
 
-.line{
-	width: 30px;
-	height: 3px;
-	background: #fff;
-	margin: 5px;
+
+.hafezrni-brand a{
+  font-size: 25px;
+  letter-spacing: 4px;
+  padding: 70px;
 }
 
-.hamburger{
-	position: fixed;
-	cursor: pointer;
-	right: 3.3%;
-	top: 2.5%;
-	transform: translate(-3.% , -2.5%);
-	z-index: 2;
-}
 

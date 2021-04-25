@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+      <title> first page </title>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet"/>
+    
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="three_dots.css">
+      <link rel="stylesheet" href="search_input.css">
+      <link rel="stylesheet" href="navstyle.css">
+    
+    </head>
+    <body class="mybody">
+      <div class="page">
+        <nav>
+          <div class="nav-container">
+            <div class="not-nav-table">
+              <li class="hafezrni-brand">
+                <a hred="#">HAFFEZNI</a>
+              </li>
+            </div>
+              <div class="nav-table">
+                  <ul class="nav-navbar">
+                      <li>
+                          <a href="first_visialusation_all_students.html" >home</a> 
+                      </li>
+                      <li>
+                          <a href="second_Just_one.html" >individial</a>
+                      </li>
+                      <li>
+                          <a href="announcment.html" >announcment</a>
+                      </li>
+                      <li>
+                          <a href="average.html" >by average</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+    
+
+
+  <div class="chart-grid">
+    <div class="make-it-center">
+      <div class="chart-style">
+        <canvas id="app-vesitors-chart"  ></canvas>
+      </div>
+    </div>
+    <div class="make-it-center">
+      <div class="chart-style">
+        <canvas id="final-note-chart"  ></canvas>
+      </div>
+    </div>
+    <div class="make-it-center">
+      <div class="chart-style">
+        <canvas id="above-ten-chart"  ></canvas>
+      </div>
+    </div>
+    <div class="make-it-center gggg">
+      <div class="container chart-style">
+        <div class="grid-container ">
+          <div class="for-grid"></div>      
+          <div class="for-grid"><canvas id="nationality-chart"></canvas></div>
+          <div class="for-grid"></div>
+          <div class="for-grid"></div>
+          <div class="for-grid"><canvas id="gender-chart"></canvas></div>
+          <div class="for-grid"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+      <!-- <div class="container">
+        <div class="grid-container">
+          <div class="for-grid"></div>
+          
+          <div class="for-grid table">
+            <table>
+              <tr>
+                <th>name</th>
+                <th>Lname</th>
+                <th>age</th>
+                <th>Lname</th>
+                <th>age</th>
+              </tr>
+              <tr>
+                <td>aaa</td>
+                <td>bbb</td>
+                <td>555</td>
+                <td>bbb</td>
+                <td>555</td>
+              </tr>
+              <tr>
+                <td>aaa</td>
+                <td>bbb</td>
+                <td>555</td>
+                <td>bbb</td>
+                <td>555</td>
+              </tr>
+              <tr>
+                <td>aaa</td>
+                <td>bbb</td>
+                <td>555</td>
+                <td>bbb</td>
+                <td>555</td>
+              </tr>
+            </table>
+          </div>
+          <div class="for-grid table">
+            <table>
+              <tr>
+                <th>name</th>
+                <th>Lname</th>
+                <th>age</th>
+                <th>Lname</th>
+                <th>age</th>
+              </tr>
+              <tr>
+                <td>aaa</td>
+                <td>bbb</td>
+                <td>555</td>
+                <td>bbb</td>
+                <td>555</td>
+              </tr>
+              <tr>
+                <td>aaa</td>
+                <td>bbb</td>
+                <td>555</td>
+                <td>bbb</td>
+                <td>555</td>
+              </tr>
+              <tr>
+              <td>aaa</td>
+              <td>bbb</td>
+              <td>555</td>
+                <td>bbb</td>
+                <td>555</td>
+              </tr>
+            </table>
+          </div>
+          
+          <div class="for-grid"></div>
+        </div>
+        
+      </div>
+       -->
+  
+  
+    <div class="first-grid-table input-toggle">  
+      <div class="chart-style"> <center class="font-title">The Top Student</center>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Department</th>
+              <th>Year</th>
+              <th>Speciality</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td><div id="p-n-1"></div></td>
+                <td><div id="p-d-1"></div></td>
+                <td><div id="p-y-1"></div></td>
+                <td><div id="p-s-1"></div></td>
+       </tr><tr><td><div id="p-n-2"></div></td>
+                <td><div id="p-d-2"></div></td>
+                <td><div id="p-y-2"></div></td>
+                <td><div id="p-s-2"></div></td></tr>
+            <tr><td><div id="p-n-3"></div></td>
+                <td><div id="p-d-3"></div></td>
+                <td><div id="p-y-3"></div></td>
+                <td><div id="p-s-3"></div></td></tr>
+            <tr><td><div id="p-n-4"></div></td>
+                <td><div id="p-d-4"></div></td>
+                <td><div id="p-y-4"></div></td>
+                <td><div id="p-s-4"></div></td></tr>
+          </tbody>
+        </table>
+        
+      </div>
+      <div></div>
+      <div class="chart-style"> <center class="font-title">The Failed Students </center>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Department</th>
+              <th>Year</th>
+              <th>Speciality</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td><div id="n-n-1"></div></td>
+                <td><div id="n-d-1"></div></td>
+                <td><div id="n-y-1"></div></td>
+                <td><div id="n-s-1"></div></td>
+       </tr><tr><td><div id="n-n-2"></div></td>
+                <td><div id="n-d-2"></div></td>
+                <td><div id="n-y-2"></div></td>
+                <td><div id="n-s-2"></div></td></tr>
+            <tr><td><div id="n-n-3"></div></td>
+                <td><div id="n-d-3"></div></td>
+                <td><div id="n-y-3"></div></td>
+                <td><div id="n-s-3"></div></td></tr>
+            <tr><td><div id="n-n-4"></div></td>
+                <td><div id="n-d-4"></div></td>
+                <td><div id="n-y-4"></div></td>
+                <td><div id="n-s-4"></div></td></tr>
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+      
+      
+  </div>
+  
+    <div class="center-dot">
+      <div class="dot-typing">
+      </div>
+  </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <script src="first-app-vesitors.js"></script>
+    <script src="first-Notes-everyone.js"></script>
+    <script src="first-piechart.js"></script>
+
+    <script src="js_file_1.js"></script>
+    <script src="js_file_2.js"></script>
+    <script src="js_file_3.js"></script>
+
+    <div id='fileNames'></div>
+</body>
+</html>

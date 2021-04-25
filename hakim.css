@@ -1,0 +1,150 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:rgb(238, 238, 238);
+}
+.father-0{
+  /* background-color: rgb(250, 249, 249); */
+  width: 100vw;
+  display: flex;
+  height: 85vh;
+  justify-content: center;
+  align-items: center;
+}
+.father-1{  
+  background-color: rgba(127, 196, 199, 0.8);
+}
+
+.make-it-center{
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-css{
+  height:40px;
+  line-height:30px;
+  background:linear-gradient(to top right , rgb(206, 206, 206), rgb(236, 236, 236));
+  margin: 30px;
+  max-width: 150px;
+  min-width: 150px;
+  text-align-last: center;
+  border: .3px solid #555;
+  border-radius: 3px;
+}
+
+
+.select-css:hover{
+  background:linear-gradient(to top right , rgba(119, 192, 192,1), rgba(119, 192, 192,0.6));
+}
+
+
+.select-css:focus{
+  outline: none;
+  border:1.3px solid #aaa
+}
+
+
+
+
+
+
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 40px;
+  font-size: 18px;
+  margin: 60px auto;
+  background-color: rgba(32, 224, 199, 0.89);
+  border:1px solid rgb(11, 255, 223);
+  border-radius: 2px;
+}
+
+.btn-father{
+  display: flex;
+  margin: 0 auto;
+}
+
+
+.grid{
+  display: flex;
+  width: 500px;
+  padding: 20px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+.f1,.inin,.f2,.input-toggle,.hhh{
+  display: none;
+}
+
+.input-style{
+  width: 200px;
+  height: 38px;
+  padding: 5px;
+  text-align: center;
+  font-size: 20px;
+  border: 2px solid #ddd;
+  border-radius: 7px;
+  transition: .3s;
+
+}
+.input-style:focus{
+  outline: none;
+  border:2.5px solid rgba(119, 192, 192);
+  transition: .3s;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+textarea{
+
+  display: flex;
+  margin: 10px auto;
+  padding: 8px;
+
+  font-size: 20px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: .3s;
+
+}
+
+
+
+textarea:focus{
+  outline: none;
+  border:2.5px solid rgba(200, 200, 200);
+  transition: .3s;
+}
+
+.hhh{
+  display: none;
+}
+
+.div-not-block{
+  display: inline;
+}
+
+.div-grid{
+display: grid;
+grid-template-columns: 17% 5% 50%;
+}
+
+.div-hide{
+  display: block;
+}
+.div-show{
+  display: none;
+}
